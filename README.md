@@ -3,7 +3,7 @@ Generates a Google credential file based on Heroku Config Vars.
 
 This is useful when using a package such as [@google-cloud/storage](https://www.npmjs.com/package/@google-cloud/storage) which loads credentials from a file instead of an environmental variable.
 
-This repository is a fork from [elishaterada/heroku-google-application-credentials-buildpack](https://github.com/elishaterada/heroku-google-application-credentials-buildpack). It fixes some bugs that I found during my usage of the original repository.
+This repository is a fork from [gerywahyunugraha/heroku-google-application-credentials-buildpack](https://github.com/gerywahyunugraha/heroku-google-application-credentials-buildpack). It fixes some bugs that I found during my usage of the original repository.
 
 ## Usage
 
