@@ -7,6 +7,9 @@ ENV_DIR=${3:-}
 
 echo "------> Generating .profile.d file to generate google-credentials.json at startup"
 mkdir -p $BUILD_DIR/.profile.d
+TOKEN=$(cat ${ENV_DIR}/GOOGLE_TOKEN)
 CREDENTIALS=$(cat ${ENV_DIR}/GOOGLE_CREDENTIALS)
+echo "echo ${TOKEN@Q} > /app/token.json" > $BUILD_DIR/.profile.d/token.sh
 echo "echo ${CREDENTIALS@Q} > /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
+chmod +x $BUILD_DIR/.profile.d/token.sh
 chmod +x $BUILD_DIR/.profile.d/google-credentials.sh
